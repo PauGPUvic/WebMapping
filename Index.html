@@ -53,18 +53,18 @@
 
   // play the video
   function playNext() {
-    if (i == videoCount -1) {i = 0;}
-    else i++
+    if (i == videoCount - 1) { i = 0; }
+    else i++;
+    console.log(i);
 
-    
     videoPlay(i);
 
   }
   function playBack() {
-    if (i <= 0) {i = videoCount;}
-    else i--
+    if (i <= 0 ) { i = videoCount - 1; }
+    else  i--;
+    console.log(i);
 
-    
     videoPlay(i);
 
   }
