@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title></title>
+
+
+
+</head>
+
+<body>
+  <video id="myVideo" width="80%">
+
+  </video>
+
+  <br>
+
+  <button onclick="playNext()">Play/Next</button>
+  <button onclick="playBack()">Play/Back</button>
+
+</body>
+<script type="text/javascript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // your script here
+  var videoSource = new Array();
+  videoSource[0] = './Media/Vid1.mp4';
+  videoSource[1] = './Media/Vid2.mp4';
+  var i = 0; // define i
+  var videoCount = videoSource.length;
+
+  var myVideo = document.getElementById("myVideo");
+
+  function videoPlay(videoNum) {
+    document.getElementById("myVideo").setAttribute("src", videoSource[videoNum]);
+    document.getElementById("myVideo").load();
+    document.getElementById("myVideo").play();
+  }
+
+
+
+
+  // play the video
+  function playNext() {
+    if (i == videoCount -1) {i = 0;}
+    else i++
+
+    
+    videoPlay(i);
+
+  }
+  function playBack() {
+    if (i <= 0) {i = videoCount;}
+    else i--
+
+    
+    videoPlay(i);
+
+  }
+
+  videoPlay(0);
+
+
+
+
+
+
+
+
+</script>
+
+</html>
